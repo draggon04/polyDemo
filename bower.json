@@ -1,0 +1,9 @@
+{
+  "name": "polydeme",
+  "private": true,
+  "dependencies": {
+    "polymer": "^2.1.1",
+    "paper-input": "PolymerElements/paper-input#^2.0.2",
+    "paper-button": "PolymerElements/paper-button#^2.0.0"
+  }
+}

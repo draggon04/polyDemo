@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+
+<dom-module id="data-binding">
+	<template>
+		<p><b>Mi nombre es:</b> [[name]]</p>
+		<paper-input label="introducir texto" value="{{text}}"></paper-input>
+		<p><b>Texto introducido:</b>[[text]]</p>
+	</template>
+	<script>
+		
+		(function dataBindingDefine(dataBinding) {
+			'use strict'
+
+			class DataBinding extends Polymer.Element{
+				static get is(){return 'data-binding';}
+
+				static get properties(){
+					return{
+						"name":{
+							type:String,
+							value:'Margarito Mancilla'
+						},
+						"text":{
+							type:String,
+							value=''
+						}
+					}
+				}
+			}
+			customElements.define(DataBinding.is, DataBinding);
+		})(window.dataBinding);
+
+	</script>
+</dom-module>

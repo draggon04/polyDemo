@@ -1,0 +1,25 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="inner-element.html">
+<link rel="import" href="data-binding.html">
+
+<dom-module id="principal-view">
+	<template>
+		<h1>Polymer Demo</h1>
+		<inner-element></inner-element>
+		<data-binding></data-binding>
+	</template>
+	<script>
+
+		(function principalViewDefine(prinpalView) {
+			'use strict'
+
+			class PrincipalView extends Polymer.Element{
+				static get is(){return 'principal-view';}
+			}
+
+			customElements.define(PrincipalView.is, PrincipalView);
+
+		})(window.principalView);
+
+	</script>
+</dom-module>

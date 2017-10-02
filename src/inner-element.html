@@ -1,0 +1,19 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="inner-element">
+	<template>
+		<h2>inner element</h2>
+	</template>
+	<script>
+		
+			(function innerElementDefine(innerElement) {
+					'use strict'
+
+					class InnerElement extends Polymer.Element{
+							static get is(){return 'inner-element';}
+					}
+					customElements.define(InnerElement.is,InnerElement);
+			})(window.innerElement);
+
+	</script>
+</dom-module>
